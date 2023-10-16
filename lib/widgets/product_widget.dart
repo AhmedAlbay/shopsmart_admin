@@ -36,13 +36,14 @@ class _ProductWidgetState extends State<ProductWidget> {
                 // );
               },
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(30.0),
+                    borderRadius: BorderRadius.circular(18.0),
                     child: FancyShimmerImage(
                       imageUrl: getCurrProduct.productImage,
                       width: double.infinity,
-                      height: size.height * 0.22,
+                      height: size.height * 0.2,
                     ),
                   ),
                   const SizedBox(

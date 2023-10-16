@@ -1,6 +1,6 @@
 class AppConstants {
   static const String productImageUrl =
-      'https://i.ibb.co/8r1Ny2n/20-Nike-Air-Force-1-07.png';
+      'https://i.ibb.co/G7nXCW4/3-i-Phone-14.jpg';
 
   static List<String> categoriesList = [
     'Phones',

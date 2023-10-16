@@ -19,6 +19,7 @@ class DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
+    // ignore: unused_local_variable
     final size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
@@ -52,7 +53,10 @@ class DashboardScreenState extends State<DashboardScreen> {
                         imagePath:
                             DashBoardButtonModel.dashBoardBtn(context)[index]
                                 .imagePath,
-                        onPressed: () {}),
+                        onPressed: () {
+                          DashBoardButtonModel.dashBoardBtn(context)[index]
+                              .onPressed();
+                        }),
                   )),
         ));
   }

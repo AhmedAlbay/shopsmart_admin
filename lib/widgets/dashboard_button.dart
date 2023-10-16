@@ -13,7 +13,7 @@ class DashBoardButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        onPressed;
+        onPressed();
       },
       child: Card(
         child: Column(
