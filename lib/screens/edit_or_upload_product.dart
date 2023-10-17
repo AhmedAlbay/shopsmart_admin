@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
@@ -146,6 +149,67 @@ class _EditOrUploadProductScreenState extends State<EditOrUploadProductScreen> {
             const SizedBox(
               height: 20,
             ),
+            if (_pickerImage == null) ...[
+              SizedBox(
+                height: size.width * .4 + 10,
+                width: size.width * .4,
+                child: DottedBorder(
+                  child: Center(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(
+                          Icons.photo_album_outlined,
+                          size: 100,
+                          color: Colors.blue,
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            localImagePicker();
+                          },
+                          child:
+                              const TitlesTextWidget(label: 'Pick the Image'),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ] else ...[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.file(
+                  File(_pickerImage!.path),
+                  height: size.width * .5,
+                  alignment: Alignment.center,
+                ),
+              )
+            ],
+            if (_pickerImage != null) ...[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                    onPressed: () {
+                      localImagePicker();
+                    },
+                    child: const TitlesTextWidget(
+                        label: 'Pick another Image', fontSize: 16),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      removePickerImage();
+                    },
+                    child: const TitlesTextWidget(
+                      label: 'Remove the Image',
+                      color: Colors.red,
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              )
+            ],
             const SizedBox(
               height: 25,
             ),

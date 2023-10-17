@@ -18,7 +18,6 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
-
 environment:
   sdk: '>=3.1.0 <4.0.0'
 
@@ -29,30 +28,23 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  card_swiper: ^2.0.4
+  cupertino_icons: ^1.0.2
+  dotted_border: ^2.1.0
+  dynamic_height_grid_view: ^0.0.3
+  fancy_shimmer_image: ^2.0.2
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  http: 0.13.3
-
-  # State management
-  provider: ^6.0.5
-  # Local Memory
-  shared_preferences: ^2.1.0
-  # Icons
   flutter_iconly: ^1.0.2
-  ionicons: ^0.2.2
-  # UI
-  shimmer: ^2.0.0
-  fancy_shimmer_image: ^2.0.2
-  dynamic_height_grid_view: ^0.0.3
-  card_swiper: ^2.0.4
+  http: 0.13.3
   image_picker: ^0.8.7+5
-  # Utils
+  ionicons: ^0.2.2
+  provider: ^6.0.5
+  shared_preferences: ^2.1.0
+  shimmer: ^2.0.0
   uuid: ^3.0.7
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -60,10 +52,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
 # The following section is specific to Flutter packages.
 flutter:
 
@@ -77,13 +70,10 @@ flutter:
     - assets/images/
     - assets/images/categories/
     - assets/images/dashboard/
-
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
-
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages
-
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a
