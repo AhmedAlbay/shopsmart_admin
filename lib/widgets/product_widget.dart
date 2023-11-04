@@ -22,7 +22,7 @@ class _ProductWidgetState extends State<ProductWidget> {
   Widget build(BuildContext context) {
     // final productModelProvider = Provider.of<ProductModel>(context);
     final productProvider = Provider.of<ProductProvider>(context);
-    final getCurrProduct = productProvider.findByProdId(widget.productId);
+    final getCurrProduct = productProvider.findById(widget.productId);
     Size size = MediaQuery.of(context).size;
     return getCurrProduct == null
         ? const SizedBox.shrink()
